@@ -15,6 +15,17 @@ for(var i = 0; i < 7; i++) {
     });
 }
 
+function animation(key) {
+    buttonToBeAnimated = document.querySelector("."+key);
+    //console.log(buttonToBeAnimated);
+
+    buttonToBeAnimated.classList.add("pressed");
+
+    setTimeout(function () {
+        buttonToBeAnimated.classList.remove("pressed");
+    }, 1000)
+}
+
 function makeSound(key) {
 
     switch(key){
