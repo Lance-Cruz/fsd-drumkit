@@ -4,6 +4,17 @@ document.addEventListener("keydown", function(event) {
     animation(event.key);
 });
 
+for(var i = 0; i < 7; i++) {
+    document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+
+        buttonClicked = this.innerHTML;
+
+        makeSound(buttonClicked);
+
+        animation(buttonClicked);
+    });
+}
+
 function makeSound(key) {
 
     switch(key){
